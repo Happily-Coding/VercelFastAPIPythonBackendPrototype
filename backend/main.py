@@ -44,10 +44,16 @@ html = f"""
 </html>
 """
 
-@app.get("/advancedtest")
-async def advanced_test():
+@app.get("/")
+async def root():
     return HTMLResponse(html)
 
+@app.get("/advancedtest")
+async def advanced_test():
+    #try:
+    return HTMLResponse(html)
+    #except Exception as ex:
+    #    print(f'svless function error{ex} ')
 
 # Load environment variables from .env file in this folder (if any)
 load_dotenv()

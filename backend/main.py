@@ -21,11 +21,16 @@ if __name__ == "__main__":
 
 #app.mount("/static", StaticFiles(directory="static"), name="static")
 
+@app.get("/test")
+async def test():
+    return {"message": "Please use the post method on /predict to get a useful result!"}
+
 html = f"""
 <!DOCTYPE html>
 <html>
     <head>
         <title>FastAPI on Vercel</title>
+        <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
     </head>
     <body>
         <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
@@ -42,11 +47,6 @@ html = f"""
 @app.get("/advancedtest")
 async def advanced_test():
     return HTMLResponse(html)
-
-@app.get("/test")
-async def test():
-    return {"message": "Please use the post method on /predict to get a useful result!"}
-
 
 
 # Load environment variables from .env file in this folder (if any)

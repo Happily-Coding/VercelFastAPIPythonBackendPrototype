@@ -40,21 +40,14 @@ html = f"""
 </html>
 """
 
-#@app.get("/")
-#async def root():
-#    return {"message": "Please use the post method on /test to get a result!"}
-#return HTMLResponse(html)
-
+@app.get("/advancedtest")
+async def advanced_test():
+    return HTMLResponse(html)
 
 @app.get("/test")
-async def root():
+async def test():
     return {"message": "Please use the post method on /predict to get a useful result!"}
 
-
-@app.post('/sendEmail')
-async def send_email(email: str):
-    print(f"Email would be sent to {email}")
-    return {"message": "Email sent successfully", "email": email}
 
 
 # Load environment variables from .env file in this folder (if any)

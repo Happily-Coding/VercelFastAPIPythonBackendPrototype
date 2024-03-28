@@ -45,8 +45,11 @@ h2{
 
 body {
     background-color: #f0f0f0;
-    /* background-image:url(assets/images/SkyCreativeCommons.jpg); no longer working */
+    /* background-image:url(assets/images/SkyCreativeCommons.jpg); no longer working  
+   
     background-image:url(./assets/images/SkyCreativeCommons.jpg);
+    Can't resolve './assets/images/SkyCreativeCommons.jpg' in '/vercel/path0/frontend/src' */
+    background-image:url(./SkyCreativeCommons.jpg);
     display: flex;
     justify-content: center;
     align-items: center;

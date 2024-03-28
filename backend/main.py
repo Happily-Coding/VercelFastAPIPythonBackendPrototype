@@ -26,7 +26,6 @@ html = f"""
 <html>
     <head>
         <title>FastAPI on Vercel</title>
-        <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
     </head>
     <body>
         <div class="bg-gray-200 p-4 rounded-lg shadow-lg">

@@ -48,7 +48,7 @@ export default function App() {
     <div className="appBlock">
       <div className="title">
         <h1 className="mainTitle">Chatty</h1>
-        {/* <img className='mainLogo' src={bottylogo} alt="Logo"/> */}
+        <img className='mainLogo' src={bottylogo} alt="Logo"/>
       </div>
       
       <form onSubmit={handleSubmit} className="form">

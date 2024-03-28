@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 export default function App() {
-  const bottylogo = require('./assets/images/BottyLogo.png')
+  //const bottylogo = require('./assets/images/BottyLogo.png')
 
   const [question, setQuestion] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +48,7 @@ export default function App() {
     <div className="appBlock">
       <div className="title">
         <h1 className="mainTitle">Chatty</h1>
-        <img className='mainLogo' src={bottylogo} alt="Logo"/>
+        {/* <img className='mainLogo' src={bottylogo} alt="Logo"/> */}
       </div>
       
       <form onSubmit={handleSubmit} className="form">

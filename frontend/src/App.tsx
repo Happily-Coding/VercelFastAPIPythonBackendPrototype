@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 export default function App() {
-  const bottylogo = require('/BottyLogo.png')
+  const bottylogo = require('./BottyLogo.png') // /BottyLogo does point to the one in public but that is forbideen from being accesible from source
 
   const [question, setQuestion] = useState('');
   const [isLoading, setIsLoading] = useState(false);

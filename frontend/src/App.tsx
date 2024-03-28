@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 export default function App() {
-  //const bottylogo = require('./assets/images/BottyLogo.png')
+  const bottylogo = require('/BottyLogo.png')
 
   const [question, setQuestion] = useState('');
   const [isLoading, setIsLoading] = useState(false);

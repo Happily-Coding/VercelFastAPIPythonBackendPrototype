@@ -21,9 +21,9 @@ if __name__ == "__main__":
 
 #app.mount("/static", StaticFiles(directory="static"), name="static")
 
-@app.get("/test")
-async def test():
-    return {"message": "Please use the post method on /predict to get a useful result!"}
+#@app.get("/test")
+#async def test():
+#    return {"message": "Please use the post method on /predict to get a useful result!"}
 
 html = f"""
 <!DOCTYPE html>
@@ -44,25 +44,25 @@ html = f"""
 </html>
 """
 
-@app.get("/")
-async def root():
-    return HTMLResponse(html)
+#@app.get("/")
+#async def root():
+#    return HTMLResponse(html)
 
 @app.get("/advancedtest")
 async def advanced_test():
-    #try:
-    return HTMLResponse(html)
-    #except Exception as ex:
-    #    print(f'svless function error{ex} ')
+    try:
+        return HTMLResponse(html)
+    except Exception as ex:
+        print(f'svless function error{ex} ')
 
 # Load environment variables from .env file in this folder (if any)
 load_dotenv()
 
-@app.post("/predict", response_model = Response) #Prepare an endpoint in /predict
-async def predict(
-    question: Optional[str] = Form(None), #Get the value in the key question from the form inside the request body, otherwise None. Automatically validate that its a string.
-    file: Optional[UploadFile] = Form(None) #Get the value in the key file from the form inside the request body, otherwise None. Automatically validate that its an UploadFile
-    ) -> Any:
+#@app.post("/predict", response_model = Response) #Prepare an endpoint in /predict
+#async def predict(
+#    question: Optional[str] = Form(None), #Get the value in the key question from the form inside the request body, otherwise None. Automatically validate that its a string.
+#    file: Optional[UploadFile] = Form(None) #Get the value in the key file from the form inside the request body, otherwise None. Automatically validate that its an UploadFile
+#    ) -> Any:
 
-    result = bard_predictor.predict(question) if question else 'Please provide a question!'
-    return {'result':result} #Response model response means we have to return a dictionary
+#    result = bard_predictor.predict(question) if question else 'Please provide a question!'
+#    return {'result':result} #Response model response means we have to return a dictionary

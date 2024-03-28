@@ -48,8 +48,10 @@ body {
     /* background-image:url(assets/images/SkyCreativeCommons.jpg); no longer working  
    
     background-image:url(./assets/images/SkyCreativeCommons.jpg);
-    Can't resolve './assets/images/SkyCreativeCommons.jpg' in '/vercel/path0/frontend/src' */
-    background-image:url(./SkyCreativeCommons.jpg);
+    Can't resolve './assets/images/SkyCreativeCommons.jpg' in '/vercel/path0/frontend/src'
+    background-image:url(./SkyCreativeCommons.jpg); Error: Can't resolve './SkyCreativeCommons.jpg' in '/vercel/path0/frontend/src'
+     */
+    background-image:url(/SkyCreativeCommons.jpg);
     display: flex;
     justify-content: center;
     align-items: center;

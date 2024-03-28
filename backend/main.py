@@ -29,9 +29,9 @@ html = f"""
 </html>
 """
 
-@app.get("/")
-async def root():
-    return {"message": "Please use the post method on /test to get a result!"}
+#@app.get("/")
+#async def root():
+#    return {"message": "Please use the post method on /test to get a result!"}
 #return HTMLResponse(html)
 
 
